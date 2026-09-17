@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASF Inspiração — Frase do dia do surf feminino</title>
-<meta name="description" content="Inspiração diária: frases e histórias de mulheres que fizeram história no surf. Satélite do app ASF.">
-<link rel="canonical" href="https://acarolmourad-commits.github.io/asf-inspiracao/">
-<style>body{font-family:system-ui,sans-serif;margin:0;background:linear-gradient(135deg,#0ea5e9,#8b5cf6);min-height:100vh;color:#fff}header{padding:3rem 1rem 1rem;text-align:center}nav{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding:1rem}nav a{color:#fff;text-decoration:none;font-size:.85rem;background:rgba(255,255,255,.15);border-radius:9999px;padding:.35rem .8rem}main{max-width:600px;margin:0 auto;padding:1rem;text-align:center}.card{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border-radius:20px;padding:2rem;margin-bottom:1rem}#quote{font-size:1.6rem;font-weight:700;line-height:1.4}#author{opacity:.8;margin-top:1rem}button{background:#fff;color:#7c3aed;border:0;border-radius:9999px;padding:.8rem 1.6rem;font-weight:700;cursor:pointer}footer{text-align:center;padding:2rem;opacity:.8}footer a{color:#fff}</style>
+<meta name="description" content="Frase do dia e histórias inspiradoras de mulheres pioneiras do surf. Satélite do app ASF.">
+<style>
+:root{--rosa:#ff4d8d;--roxo:#7b2ff7;--areia:#fff5ec;--mar:#00c2cb}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{background:linear-gradient(160deg,#fff5ec,#ffe3f1 60%,#e0f7fa);min-height:100vh;color:#333}
+header{background:linear-gradient(90deg,var(--roxo),var(--rosa));color:#fff;padding:2rem 1rem;text-align:center}
+header h1{font-size:2rem}header p{opacity:.9;margin-top:.4rem}
+nav{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;padding:.8rem;background:#fff;box-shadow:0 2px 8px #0001;position:sticky;top:0;z-index:10}
+nav a{background:var(--areia);border:1px solid #ffd3e6;color:#c2185b;padding:.3rem .7rem;border-radius:20px;font-size:.78rem;text-decoration:none}
+nav a:hover{background:var(--rosa);color:#fff}
+main{max-width:640px;margin:1.5rem auto;padding:0 1rem}
+.card{background:#fff;border-radius:16px;padding:1.6rem;box-shadow:0 4px 16px #7b2ff720;margin-bottom:1.2rem}
+.card h2{color:var(--roxo);margin-bottom:.6rem;font-size:1.2rem}
+.frase{font-size:1.5rem;font-style:italic;color:#c2185b;text-align:center;line-height:1.5}
+.autor{text-align:right;color:#888;margin-top:.8rem;font-weight:bold}
+button{background:linear-gradient(90deg,var(--rosa),var(--roxo));color:#fff;border:none;padding:.6rem 1.2rem;border-radius:24px;font-size:1rem;cursor:pointer;display:block;margin:1rem auto 0}
+.historia{border-left:4px solid var(--rosa);padding:.8rem 1rem;background:var(--areia);border-radius:0 12px 12px 0;margin:.8rem 0}
+.historia h3{color:var(--rosa);margin-bottom:.3rem}
+.xp{position:fixed;bottom:1rem;right:1rem;background:#fff;border:2px solid var(--rosa);border-radius:24px;padding:.4rem 1rem;font-weight:bold;color:var(--roxo);box-shadow:0 4px 12px #0002}
+footer{text-align:center;padding:2rem;font-size:.8rem;color:#888}
+footer a{color:var(--rosa)}
+</style>
 </head>
 <body>
-<header><h1>ASF Inspiração ✨</h1><p>Uma dose diária de coragem do mar</p></header>
-<nav id="net"></nav>
+<header><h1>💜 ASF Inspiração</h1><p>Uma dose diária de motivação das mulheres do surf</p></header>
+<nav>
+<a href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ ASF App</a>
+<a href="https://acarolmourad-commits.github.io/asf-historia/">História</a>
+<a href="https://acarolmourad-commits.github.io/asf-comunidade/">Comunidade</a>
+<a href="https://acarolmourad-commits.github.io/asf-mental/">Mental</a>
+<a href="https://acarolmourad-commits.github.io/asf-sonhos/">Sonhos</a>
+<a href="https://acarolmourad-commits.github.io/asf-desafio/">Desafio 30</a>
+<a href="https://acarolmourad-commits.github.io/asf-ranking/">Ranking</a>
+<a href="https://acarolmourad-commits.github.io/asf-quiz/">Quiz</a>
+</nav>
 <main>
-<div class="card"><div id="quote"></div><div id="author"></div><br><button onclick="nova()">🔄 Nova inspiração</button> <button onclick="share()">📤 Compartilhar</button></div>
-<div class="card"><p>📜 Conheça as pioneiras no <a href="https://acarolmourad-commits.github.io/asf-historia/" style="color:#fff">ASF História</a> e compartilhe a sua na <a href="https://acarolmourad-commits.github.io/asf-comunidade/" style="color:#fff">Comunidade</a>.</p></div>
+<div class="card"><p class="frase" id="frase">…</p><p class="autor" id="autor"></p><button onclick="nova()">✨ Outra frase</button></div>
+<div class="card"><h2>Pioneiras que abriram o caminho 🌊</h2>
+<div class="historia"><h3>Maya Gabeira</h3><p>Recordista mundial de ondas gigantes, surfou um dos maiores tubos já registrados por uma mulher em Nazaré — depois de quase morrer no mesmo pico.</p></div>
+<div class="historia"><h3>Silvana Lima</h3><p>Do Ceará para o circuito mundial: referência de manobras aéreas e pioneira do surf progressivo brasileiro.</p></div>
+<div class="historia"><h3>Bethany Hamilton</h3><p>Perdeu o braço num ataque de tubarão aos 13 e voltou a competir profissionalmente — símbolo mundial de resiliência.</p></div>
+<div class="historia"><h3>Stephanie Gilmore</h3><p>8 vezes campeã mundial, redefiniu o que é possível no surf feminino com estilo e constância.</p></div>
+<p style="font-size:.85rem;color:#888">Conheça mais na <a href="https://acarolmourad-commits.github.io/asf-historia/">História do surf feminino</a> e compartilhe a sua na <a href="https://acarolmourad-commits.github.io/asf-comunidade/">Comunidade</a>.</p></div>
 </main>
-<footer>ASF Inspiração — satélite do <a href="https://acarolmourad-commits.github.io/asf-app/">app ASF</a></footer>
+<div class="xp">⭐ XP: <span id="xp">0</span></div>
+<footer>ASF — Associação de Surf Feminino · Feito com 🌊 e 💜 · <a href="https://acarolmourad-commits.github.io/asf-app/">asf-app</a></footer>
 <script>
-const sites=[["asf-app","App ASF"],["asf-historia","História"],["asf-comunidade","Comunidade"],["asf-mental","Mental"],["asf-mental","Mental"],["asf-galeria","Galeria"],["asf-quiz","Quiz"],["asf-bemestar","Bem-Estar"]];
-document.getElementById('net').innerHTML=[...new Map(sites.map(s=>[s[0],s])).values()].map(s=>`<a href="https://acarolmourad-commits.github.io/${s[0]}/">${s[1]}</a>`).join('');
-const Q=[["O mar não faz distinção de gênero. A coragem é de quem entra.","ASF"],["You can't stop the waves, but you can learn to surf.","Jon Kabat-Zinn"],["A melhor surfista é a que mais se diverte na água.","Filosofia do pico"],["Cada queda é uma aula. Cada onda, uma chance.","ASF"],["O oceano me ensinou paciência — a onda certa sempre vem.","Maya Gabeira (inspirado)"],["Menina, o mar é seu. Entre.","ASF"],["Surf é 90% remada e 10% glória. Como a vida.","ASF"],["Não espere a onda perfeita. Surfe a que veio.","ASF"]];
-let i=Math.floor(Math.random()*Q.length);
-function show(){document.getElementById('quote').textContent='“'+Q[i][0]+'”';document.getElementById('author').textContent='— '+Q[i][1];}
-function nova(){i=(i+1)%Q.length;show();}
-function share(){const t='“'+Q[i][0]+'” — '+Q[i][1]+' 🌊 ASF Inspiração';if(navigator.share){navigator.share({text:t});}else{navigator.clipboard.writeText(t);alert('Copiado! Cole no seu story 💜');}}
-show();
+const FRASES=[['O mar não sabe se você é homem ou mulher. Ele só respeita quem o respeita.','Maya Gabeira'],['Não espere pela onda perfeita. Aprenda a surfar as que vêm.','Silvana Lima'],['Coragem não é ausência de medo. É entrar no mar com ele.','Bethany Hamilton'],['A melhor surfista no line-up é a que mais se diverte.','Filosofia do surf'],['Cada vaca é uma aula. Cada onda é uma chance.','ASF'],['Você não precisa ser a melhor do pico. Precisa ser a mais consistente.','ASF'],['O oceano me ensinou paciência; o surf me ensinou coragem.','ASF'],['Comece pequeno, sonhe grande, reme sempre.','ASF'],['Seu lugar no line-up é conquistado um dia de cada vez.','ASF'],['O corpo alcança o que a mente acredita.','ASF Mental']];
+const XP=()=>parseInt(localStorage.getItem('asf_xp')||'0');
+function addXP(n){localStorage.setItem('asf_xp',XP()+n);document.getElementById('xp').textContent=XP();}
+document.getElementById('xp').textContent=XP();
+function mostrar(i){document.getElementById('frase').textContent='“'+FRASES[i][0]+'”';document.getElementById('autor').textContent='— '+FRASES[i][1];}
+function nova(){mostrar(Math.floor(Math.random()*FRASES.length));addXP(2);}
+const diaAno=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5);
+mostrar(diaAno%FRASES.length);
+if(localStorage.getItem('asf_inspiracao_dia')!==new Date().toDateString()){localStorage.setItem('asf_inspiracao_dia',new Date().toDateString());addXP(3);}
 </script>
 </body>
 </html>
