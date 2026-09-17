@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASF Inspiração — Frase do dia do surf feminino</title>
+<meta name="description" content="Inspiração diária: frases e histórias de mulheres que fizeram história no surf. Satélite do app ASF.">
+<link rel="canonical" href="https://acarolmourad-commits.github.io/asf-inspiracao/">
+<style>body{font-family:system-ui,sans-serif;margin:0;background:linear-gradient(135deg,#0ea5e9,#8b5cf6);min-height:100vh;color:#fff}header{padding:3rem 1rem 1rem;text-align:center}nav{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding:1rem}nav a{color:#fff;text-decoration:none;font-size:.85rem;background:rgba(255,255,255,.15);border-radius:9999px;padding:.35rem .8rem}main{max-width:600px;margin:0 auto;padding:1rem;text-align:center}.card{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border-radius:20px;padding:2rem;margin-bottom:1rem}#quote{font-size:1.6rem;font-weight:700;line-height:1.4}#author{opacity:.8;margin-top:1rem}button{background:#fff;color:#7c3aed;border:0;border-radius:9999px;padding:.8rem 1.6rem;font-weight:700;cursor:pointer}footer{text-align:center;padding:2rem;opacity:.8}footer a{color:#fff}</style>
+</head>
+<body>
+<header><h1>ASF Inspiração ✨</h1><p>Uma dose diária de coragem do mar</p></header>
+<nav id="net"></nav>
+<main>
+<div class="card"><div id="quote"></div><div id="author"></div><br><button onclick="nova()">🔄 Nova inspiração</button> <button onclick="share()">📤 Compartilhar</button></div>
+<div class="card"><p>📜 Conheça as pioneiras no <a href="https://acarolmourad-commits.github.io/asf-historia/" style="color:#fff">ASF História</a> e compartilhe a sua na <a href="https://acarolmourad-commits.github.io/asf-comunidade/" style="color:#fff">Comunidade</a>.</p></div>
+</main>
+<footer>ASF Inspiração — satélite do <a href="https://acarolmourad-commits.github.io/asf-app/">app ASF</a></footer>
+<script>
+const sites=[["asf-app","App ASF"],["asf-historia","História"],["asf-comunidade","Comunidade"],["asf-mental","Mental"],["asf-mental","Mental"],["asf-galeria","Galeria"],["asf-quiz","Quiz"],["asf-bemestar","Bem-Estar"]];
+document.getElementById('net').innerHTML=[...new Map(sites.map(s=>[s[0],s])).values()].map(s=>`<a href="https://acarolmourad-commits.github.io/${s[0]}/">${s[1]}</a>`).join('');
+const Q=[["O mar não faz distinção de gênero. A coragem é de quem entra.","ASF"],["You can't stop the waves, but you can learn to surf.","Jon Kabat-Zinn"],["A melhor surfista é a que mais se diverte na água.","Filosofia do pico"],["Cada queda é uma aula. Cada onda, uma chance.","ASF"],["O oceano me ensinou paciência — a onda certa sempre vem.","Maya Gabeira (inspirado)"],["Menina, o mar é seu. Entre.","ASF"],["Surf é 90% remada e 10% glória. Como a vida.","ASF"],["Não espere a onda perfeita. Surfe a que veio.","ASF"]];
+let i=Math.floor(Math.random()*Q.length);
+function show(){document.getElementById('quote').textContent='“'+Q[i][0]+'”';document.getElementById('author').textContent='— '+Q[i][1];}
+function nova(){i=(i+1)%Q.length;show();}
+function share(){const t='“'+Q[i][0]+'” — '+Q[i][1]+' 🌊 ASF Inspiração';if(navigator.share){navigator.share({text:t});}else{navigator.clipboard.writeText(t);alert('Copiado! Cole no seu story 💜');}}
+show();
+</script>
+</body>
+</html>
