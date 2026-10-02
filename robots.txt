@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://acarolmourad-commits.github.io/asf-inspiracao/sitemap.xml
+
+Sitemap: https://inspiracao.asf.surf/sitemap.xml
